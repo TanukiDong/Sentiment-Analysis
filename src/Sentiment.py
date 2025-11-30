@@ -12,23 +12,23 @@ random.seed(80956)
 def readFiles(sentimentDictionary,sentencesTrain,sentencesTest,sentencesNokia):
 
     #reading pre-labeled input and splitting into lines
-    posSentences = open('rt-polarity.pos', 'r', encoding="ISO-8859-1")
+    posSentences = open('data/rt-polarity.pos', 'r', encoding="ISO-8859-1")
     posSentences = re.split(r'\n', posSentences.read())
 
-    negSentences = open('rt-polarity.neg', 'r', encoding="ISO-8859-1")
+    negSentences = open('data/rt-polarity.neg', 'r', encoding="ISO-8859-1")
     negSentences = re.split(r'\n', negSentences.read())
 
-    posSentencesNokia = open('nokia-pos.txt', 'r')
+    posSentencesNokia = open('data/nokia-pos.txt', 'r')
     posSentencesNokia = re.split(r'\n', posSentencesNokia.read())
 
-    negSentencesNokia = open('nokia-neg.txt', 'r', encoding="ISO-8859-1")
+    negSentencesNokia = open('data/nokia-neg.txt', 'r', encoding="ISO-8859-1")
     negSentencesNokia = re.split(r'\n', negSentencesNokia.read())
 
-    posDictionary = open('positive-words.txt', 'r', encoding="ISO-8859-1")
+    posDictionary = open('data/positive-words.txt', 'r', encoding="ISO-8859-1")
     # Omit comments
     posWordList = [line.strip() for line in posDictionary if not line.startswith(';')]
 
-    negDictionary = open('negative-words.txt', 'r', encoding="ISO-8859-1")
+    negDictionary = open('data/negative-words.txt', 'r', encoding="ISO-8859-1")
     # Omit comments
     negWordList = [line.strip() for line in negDictionary if not line.startswith(';')]
 
@@ -392,26 +392,26 @@ pWord={}    # p(W)
 trainBayes(sentencesTrain, pWordPos, pWordNeg, pWord)
 
 # run naive bayes classifier on datasets
-# testBayes(sentencesTrain,  "Films (Train Data, Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
+testBayes(sentencesTrain,  "Films (Train Data, Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
 testBayes(sentencesTest,  "Films  (Test Data, Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
-# testBayes(sentencesNokia, "Nokia   (All Data,  Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.7)
+testBayes(sentencesNokia, "Nokia   (All Data,  Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.7)
 
 
 
 # run sentiment dictionary based classifier on datasets
-# testDictionary(sentencesTrain,  "Films (Train Data, non Rule-Based)\t", sentimentDictionary, 1)
-# testDictionary(sentencesTest,  "Films  (Test Data, non Rule-Based)\t",  sentimentDictionary, 1)
-# testDictionary(sentencesNokia, "Nokia   (All Data, non Rule-Based)\t",  sentimentDictionary, 1)
+testDictionary(sentencesTrain,  "Films (Train Data, non Rule-Based)\t", sentimentDictionary, 1)
+testDictionary(sentencesTest,  "Films  (Test Data, non Rule-Based)\t",  sentimentDictionary, 1)
+testDictionary(sentencesNokia, "Nokia   (All Data, non Rule-Based)\t",  sentimentDictionary, 1)
 
 # run improved sentiment dictionary based classifier on datasets
-# testImprovedDict(sentencesTrain,  "Films (Train Data, Rule-Based)\t", sentimentDictionary, 1.0)
+testImprovedDict(sentencesTrain,  "Films (Train Data, Rule-Based)\t", sentimentDictionary, 1.0)
 testImprovedDict(sentencesTest,  "Films  (Test Data, Rule-Based)\t",  sentimentDictionary, 1.0)
-# testImprovedDict(sentencesNokia, "Nokia   (All Data, Rule-Based)\t",  sentimentDictionary, 1.0)
+testImprovedDict(sentencesNokia, "Nokia   (All Data, Rule-Based)\t",  sentimentDictionary, 1.0)
 
 # print most useful words
-# neg_useful, pos_useful = mostUseful(pWordPos, pWordNeg, pWord, 100)
+neg_useful, pos_useful = mostUseful(pWordPos, pWordNeg, pWord, 100)
 
-# print()
-# countDictionaryWords(neg_useful, sentimentDictionary, Label="Negative")
-# print()
-# countDictionaryWords(pos_useful, sentimentDictionary, Label="Positive")
+print()
+countDictionaryWords(neg_useful, sentimentDictionary, Label="Negative")
+print()
+countDictionaryWords(pos_useful, sentimentDictionary, Label="Positive")
