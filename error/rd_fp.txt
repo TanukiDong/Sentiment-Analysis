@@ -1,0 +1,115 @@
+ERROR (neg classed as pos 1.00):this 100-minute movie only has about 25 minutes of decent material . 
+ERROR (neg classed as pos 1.00):an easy watch , except for the annoying demeanour of its lead character . 
+ERROR (neg classed as pos 2.00):though her fans will assuredly have their funny bones tickled , others will find their humor-seeking dollars best spent elsewhere . 
+ERROR (neg classed as pos 1.00):everything is pegged into the groove of a new york dating comedy with 'issues' to simplify . 
+ERROR (neg classed as pos 2.00):a suffocating rape-payback horror show that hinges on the subgenre's most enabling victim . . . and an ebullient affection for industrial-model meat freezers . 
+ERROR (neg classed as pos 2.50):woo has as much right to make a huge action sequence as any director , but how long will filmmakers copy the " saving private ryan " battle scenes before realizing steven spielberg got it right the first time ? 
+ERROR (neg classed as pos 2.00):why , you may ask , why should you buy the movie milk when the tv cow is free ? there's no good answer to that one . 
+ERROR (neg classed as pos 1.00):cold and scattered , minority report commands interest almost solely as an exercise in gorgeous visuals . that's not vintage spielberg and that , finally , is minimally satisfying . 
+ERROR (neg classed as pos 1.00):the trappings of i spy are so familiar you might as well be watching a rerun . 
+ERROR (neg classed as pos 2.68):directed without the expected flair or imagination by hong kong master john woo , windtalkers airs just about every cliche in the war movie compendium across its indulgent two-hour-and-fifteen-minute length . 
+ERROR (neg classed as pos 1.00):everybody loves a david and goliath story , and this one is told almost entirely from david's point of view . 
+ERROR (neg classed as pos 1.00):let's issue a moratorium , effective immediately , on treacly films about inspirational prep-school professors and the children they so heartwarmingly motivate . 
+ERROR (neg classed as pos 1.00):it's not so much a movie as a joint promotion for the national basketball association and teenaged rap and adolescent poster-boy lil' bow wow . 
+ERROR (neg classed as pos 2.00):might best be enjoyed as a daytime soaper . 
+ERROR (neg classed as pos 1.10):as an actor's showcase , hart's war has much to recommend it , even if the top-billed willis is not the most impressive player . as a story of dramatic enlightenment , the screenplay by billy ray and terry george leaves something to be desired . 
+ERROR (neg classed as pos 1.33):a really good premise is frittered away in middle-of-the-road blandness . 
+ERROR (neg classed as pos 1.00):a well made indieflick in need of some trims and a more chemistry between its stars . 
+ERROR (neg classed as pos 1.00):much like its easily dismissive take on the upscale lifestyle , there isn't much there here . 
+ERROR (neg classed as pos 2.64):not the great american comedy , but if you liked the previous movies in the series , you'll have a good time with this one too . 
+ERROR (neg classed as pos 2.67):you might say tykwer has done all that heaven allows , if you wanted to make as anti-kieslowski a pun as possible . suffice to say its total promise is left slightly unfulfilled . 
+ERROR (neg classed as pos 3.00):it's so crammed with scenes and vistas and pretty moments that it's left a few crucial things out , like character development and coherence . 
+ERROR (neg classed as pos 1.00):the movie ends with outtakes in which most of the characters forget their lines and just utter 'uhhh , ' which is better than most of the writing in the movie . 
+ERROR (neg classed as pos 3.00):'synthetic' is the best description of this well-meaning , beautifully produced film that sacrifices its promise for a high-powered star pedigree . 
+ERROR (neg classed as pos 2.36):the château would have been benefited from a sharper , cleaner script before it went in front of the camera . not to mention a sharper , cleaner camera lens . 
+ERROR (neg classed as pos 2.50):normally , rohmer's talky films fascinate me , but when he moves his setting to the past , and relies on a historical text , he loses the richness of characterization that makes his films so memorable . 
+ERROR (neg classed as pos 1.50):the best drug addition movies are usually depressing but rewarding . quitting , however , manages just to be depressing , as the lead actor phones in his autobiographical performance . 
+ERROR (neg classed as pos 2.00):in the end , all you can do is admire the ensemble players and wonder what the point of it is . 
+ERROR (neg classed as pos 1.00):too intensely focused on the travails of being hal hartley to function as pastiche , no such thing is hartley's least accessible screed yet . 
+ERROR (neg classed as pos 2.00):in both the writing and cutting , it does not achieve the kind of dramatic unity that transports you . you end up simply admiring this bit or that , this performance or that . 
+ERROR (neg classed as pos 2.00):'all in all , reign of fire will be a good ( successful ) rental . '
+ERROR (neg classed as pos 1.00):cinematic pyrotechnics aside , the only thing avary seems to care about are mean giggles and pulchritude . it makes sense that he went back to school to check out the girls -- his film is a frat boy's idea of a good time . 
+ERROR (neg classed as pos 1.00):[t]here's only so much anyone can do with a florid , overplotted , anne rice rock 'n' roll vampire novel before the built-in silliness of the whole affair defeats them . 
+ERROR (neg classed as pos 1.27):the lower your expectations , the more you'll enjoy it . 
+ERROR (neg classed as pos 1.00):whereas last year's exemplary sexy beast seemed to revitalize the british gangster movie , this equally brutal outing merely sustains it . 
+ERROR (neg classed as pos 3.56):it showcases carvey's talent for voices , but not nearly enough and not without taxing every drop of one's patience to get to the good stuff . 
+ERROR (neg classed as pos 1.00):if looking for a thrilling sci-fi cinematic ride , don't settle for this imposter . 
+ERROR (neg classed as pos 1.00):nothing more substantial than a fitfully clever doodle . 
+ERROR (neg classed as pos 1.00):mcconaughey's fun to watch , the dragons are okay , not much fire in the script . 
+ERROR (neg classed as pos 1.00):the film takes too long getting to the good stuff , then takes too long figuring out what to do next . 
+ERROR (neg classed as pos 1.00):well , it does go on forever . 
+ERROR (neg classed as pos 2.00):yes , one enjoys seeing joan grow from awkward young woman to strong , determined monarch , but her love for the philandering philip only diminishes her stature . 
+ERROR (neg classed as pos 1.00): . . . instead go rent " shakes the clown " , a much funnier film with a similar theme and an equally great robin williams performance . 
+ERROR (neg classed as pos 1.00):it's the kind of movie that ends up festooning u . s . art house screens for no reason other than the fact that it's in french ( well , mostly ) with english subtitles and is magically 'significant' because of that . 
+ERROR (neg classed as pos 1.52):the final result makes for adequate entertainment , i suppose , but anyone who has seen chicago on stage will leave the theater feeling they've watched nothing but a pale imitation of the real deal . 
+ERROR (neg classed as pos 3.00):perfectly enjoyable , instantly forgettable , nothing to write home about . 
+ERROR (neg classed as pos 3.18):dull , if not devoid of wit , this shaggy dog longs to frisk through the back alleys of history , but scarcely manages more than a modest , snoozy charm . 
+ERROR (neg classed as pos 2.00):well-intentioned though it may be , its soap-opera morality tales have the antiseptic , preprogrammed feel of an after-school special . 
+ERROR (neg classed as pos 1.00):proof that a thriller can be sleekly shot , expertly cast , paced with crisp professionalism . . . and still be a letdown if its twists and turns hold no more surprise than yesterday's weather report . 
+ERROR (neg classed as pos 1.00):trivial where it should be profound , and hyper-cliched where it should be sincere . 
+ERROR (neg classed as pos 1.00): . . . watching this film nearly provoked me to take my own life . and if the hours wins 'best picture' i just might . 
+ERROR (neg classed as pos 2.00):like a tone-deaf singer at a benefit concert , john q . is a bad movie appearing on behalf of a good cause . 
+ERROR (neg classed as pos 2.00):the latest installment in the pokemon canon , pokemon 4ever is surprising less moldy and trite than the last two , likely because much of the japanese anime is set in a scenic forest where pokemon graze in peace . 
+ERROR (neg classed as pos 2.00):too leisurely paced and visually drab for its own good , it succeeds in being only sporadically amusing . 
+ERROR (neg classed as pos 2.00):cho's fans are sure to be entertained ; it's only fair in the interest of full disclosure to say that -- on the basis of this film alone -- i'm not one of them . 
+ERROR (neg classed as pos 1.00):the makers have forsaken the entertaining elements of the original and , instead , rehash old jokes and leave any life at the doorstep . i like frank the pug , though . 
+ERROR (neg classed as pos 2.00):instead of kicking off the intrigue and suspense and mystery of the whole thing , hart's war , like the st . louis rams in the super bowl , waits until after halftime to get started . 
+ERROR (neg classed as pos 1.00):those who managed to avoid the deconstructionist theorizing of french philosopher jacques derrida in college can now take an 85-minute brush-up course with the documentary derrida . or , you can do something fun tonight . 
+ERROR (neg classed as pos 1.00):while super troopers is above academy standards , its quintet of writers could still use some more schooling . 
+ERROR (neg classed as pos 2.00):a well acted and well intentioned snoozer . 
+ERROR (neg classed as pos 2.00):this is a great subject for a movie , but hollywood has squandered the opportunity , using it as a prop for warmed-over melodrama and the kind of choreographed mayhem that director john woo has built his career on . 
+ERROR (neg classed as pos 1.00):just like the deli sandwich : lots of ham , lots of cheese , with a sickly sweet coating to disguise its excrescence until just after ( or during ) consumption of its second half . 
+ERROR (neg classed as pos 1.00):everything that's worthwhile about collision course can already be seen on television . 
+ERROR (neg classed as pos 1.50):eastwood is an icon of moviemaking , one of the best actors , directors and producers around , responsible for some excellent work . but even a hero can stumble sometimes . 
+ERROR (neg classed as pos 2.00):safe conduct , however ambitious and well-intentioned , fails to hit the entertainment bull's-eye . 
+ERROR (neg classed as pos 1.00):you're better off staying home and watching the x-files . 
+ERROR (neg classed as pos 1.00):like a documentary version of fight club , shorn of social insight , intellectual pretension and cinematic interest . 
+ERROR (neg classed as pos 2.30):the plot's clearly mythic structure may owe more to disney's strong sense of formula than to the original story . but while the highly predictable narrative falls short , treasure planet is truly gorgeous to behold . 
+ERROR (neg classed as pos 2.00):it all seemed wasted like deniro's once promising career and the once grand long beach boardwalk . 
+ERROR (neg classed as pos 3.00):deliberately and devotedly constructed , far from heaven is too picture postcard perfect , too neat and new pin-like , too obviously a recreation to resonate . 
+ERROR (neg classed as pos 1.00):make like the title and dodge this one . 
+ERROR (neg classed as pos 1.20):follows the original film virtually scene for scene and yet manages to bleed it almost completely dry of humor , verve and fun . 
+ERROR (neg classed as pos 1.50):goldbacher draws on an elegant visual sense and a talent for easy , seductive pacing . . . but she and writing partner laurence coriat don't manage an equally assured narrative coinage . 
+ERROR (neg classed as pos 1.00):best described as i know what you did last winter . 
+ERROR (neg classed as pos 2.00):like shave ice without the topping , this cinematic snow cone is as innocuous as it is flavorless . 
+ERROR (neg classed as pos 1.00):they threw loads of money at an idea that should've been so much more even if it was only made for teenage boys and wrestling fans . 
+ERROR (neg classed as pos 1.00):wins my vote for 'the 2002 enemy of cinema' award . 
+ERROR (neg classed as pos 4.00):carrying this wafer-thin movie on his nimble shoulders , chan wades through putrid writing , direction and timing with a smile that says , 'if i stay positive , maybe i can channel one of my greatest pictures , drunken master . '
+ERROR (neg classed as pos 1.00):a superfluous sequel . . . plagued by that old familiar feeling of 'let's get this thing over with' : everyone has shown up at the appointed time and place , but visible enthusiasm is mighty hard to find . 
+ERROR (neg classed as pos 2.50):the master of disguise may have made a great saturday night live sketch , but a great movie it is not . 
+ERROR (neg classed as pos 1.27):it's quite an achievement to set and shoot a movie at the cannes film festival and yet fail to capture its visual appeal or its atmosphere . 
+ERROR (neg classed as pos 1.21):like a medium-grade network sitcom--mostly inoffensive , fitfully amusing , but ultimately so weightless that a decent draft in the auditorium might blow it off the screen . 
+ERROR (neg classed as pos 1.33):there's something fishy about a seasonal holiday kids' movie . . . that derives its moment of most convincing emotional gravity from a scene where santa gives gifts to grownups . 
+ERROR (neg classed as pos 1.50):lush and beautifully photographed ( somebody suggested the stills might make a nice coffee table book ) , but ultimately you'll leave the theater wondering why these people mattered . 
+ERROR (neg classed as pos 1.00):[siegel] and co-writers lisa bazadona and grace woodard have relied too much on convention in creating the characters who surround frankie . 
+ERROR (neg classed as pos 3.00):it's mindless junk like this that makes you appreciate original romantic comedies like punch-drunk love . 
+ERROR (neg classed as pos 3.00):the movie is like a year late for tapping into our reality tv obsession , and even tardier for exploiting the novelty of the " webcast . " 
+ERROR (neg classed as pos 1.00):while american adobo has its heart ( and its palate ) in the right place , its brain is a little scattered -- ditsy , even . 
+ERROR (neg classed as pos 1.00):directed by kevin bray , whose crisp framing , edgy camera work , and wholesale ineptitude with acting , tone and pace very obviously mark him as a video helmer making his feature debut . 
+ERROR (neg classed as pos 1.71):neither a rousing success nor a blinding embarrassment . still , it just sits there like a side dish no one ordered . 
+ERROR (neg classed as pos 1.00):brainy , artistic and muted , almost to the point of suffocation . 
+ERROR (neg classed as pos 1.00):it puts washington , as honest working man john q . archibald , on a pedestal , then keeps lifting the pedestal higher . 
+ERROR (neg classed as pos 1.33):far more enjoyable than its predecessor . 
+ERROR (neg classed as pos 1.00):even by the intentionally low standards of frat-boy humor , sorority boys is a bowser . 
+ERROR (neg classed as pos 1.67):its and pieces of the hot chick are so hilarious , and schneider's performance is so fine , it's a real shame that so much of the movie -- again , as in the animal -- is a slapdash mess . 
+ERROR (neg classed as pos 1.00):i was sent a copyof this film to review on dvd . for free . i still want my money back . 
+ERROR (neg classed as pos 1.00):will no doubt delight plympton's legion of fans ; others may find 80 minutes of these shenanigans exhausting . 
+ERROR (neg classed as pos 1.50):ice cube isn't quite out of ripe screwball ideas , but friday after next spreads them pretty thin . 
+ERROR (neg classed as pos 2.00):[johnnie to and wai ka fai are] sure to find an enthusiastic audience among american action-adventure buffs , but the film's interests may be too narrow to attract crossover viewers . 
+ERROR (neg classed as pos 1.00):screenwriter dan schneider and director shawn levy substitute volume and primary colors for humor and bite . 
+ERROR (neg classed as pos 1.00):even accepting this in the right frame of mind can only provide it with so much leniency . 
+ERROR (neg classed as pos 1.00):when one hears harry shearer is going to make his debut as a film director , one would hope for the best
+ERROR (neg classed as pos 2.00):as self-aware movies go , who is cletis tout ? is clever enough , though thin writing proves its undoing . 
+ERROR (neg classed as pos 1.14):there are more shots of children smiling for the camera than typical documentary footage which hurts the overall impact of the film . it's makes a better travelogue than movie . 
+ERROR (neg classed as pos 1.33):more precious than perspicacious
+ERROR (neg classed as pos 3.14):all analyze that proves is that there is really only one movie's worth of decent gags to be gleaned from the premise . 
+ERROR (neg classed as pos 1.54):unfortunately , neither sendak nor the directors are particularly engaging or articulate . 
+ERROR (neg classed as pos 2.00):though its rather routine script is loaded with familiar situations , the movie has a cinematic fluidity and sense of intelligence that makes it work more than it probably should . 
+ERROR (neg classed as pos 2.00):the romance between the leads isn't as compelling or as believable as it should be . 
+ERROR (neg classed as pos 2.17):the country bears wastes an exceptionally good idea . but the movie that doesn't really deliver for country music fans or for family audiences
+ERROR (neg classed as pos 1.00):the 70-year-old godard has become , to judge from in praise of love , the sort of bitter old crank who sits behind his light meter and harangues the supposed injustices of the artistic world-at-large without doing all that much to correct them . 
+ERROR (neg classed as pos 1.00):the film never gets over its own investment in conventional arrangements , in terms of love , age , gender , race , and class . 
+ERROR (neg classed as pos 1.00):does anyone much think the central story of brendan behan is that he was a bisexual sweetheart before he took to drink ? 
+ERROR (neg classed as pos 1.00):it has become apparent that the franchise's best years are long past . 
+ERROR (neg classed as pos 4.00):purports to be a hollywood satire but winds up as the kind of film that should be the target of something deeper and more engaging . oh , and more entertaining , too . 
+ERROR (neg classed as pos 1.00):like the tuck family themselves , this movie just goes on and on and on and on
