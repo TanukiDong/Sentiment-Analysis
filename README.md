@@ -70,132 +70,32 @@ Sentiment-Analysis/
 
 ## Results
 
-<style>
-  table {
-    width: 75%;
-    border-collapse: collapse;
-  }
-
-  th, td {
-    text-align: center;
-    border: 1px solid black;
-    padding: 5px;
-  }
-</style>
-
 Top 5 positive and negative words selected by Naïve Bayes.
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th align="center">Positive</th>
-      <th align="center">Negative</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td align="center">½</td>
-      <td align="center">generic</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td align="center">ï</td>
-      <td align="center">unfunny</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td align="center">engrossing</td>
-      <td align="center">waste</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td align="center">inventive</td>
-      <td align="center">mediocre</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td align="center">riveting</td>
-      <td align="center">routine</td>
-    </tr>
-  </tbody>
-</table>
+|  #  | Positive  | Negative  |
+|:---:|:---------:|:---------:|
+|  1  | ½         | generic   |
+|  2  | ï         | unfunny   |
+|  3  | engrossing| waste     |
+|  4  | inventive | mediocre  |
+|  5  | riveting  | routine   |
 
 Top sentiment words that are found and not found in the sentiment dictionary
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="2">Word Found in Dictionary</th>
-      <th colspan="2">Word not Found in Dictionary</th>
-    </tr>
-    <tr>
-      <th>Positive</th>
-      <th>Negative</th>
-      <th>Positive</th>
-      <th>Negative</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mesmerizing</td>
-      <td>Boring</td>
-      <td>Touching</td>
-      <td>Harvard</td>
-    </tr>
-    <tr>
-      <td>Captivating</td>
-      <td>Offensive</td>
-      <td>Transcends</td>
-      <td>Clichés</td>
-    </tr>
-    <tr>
-      <td>Masterpiece</td>
-      <td>Lifeless</td>
-      <td>Martha</td>
-      <td>Tuxedo</td>
-    </tr>
-    <tr>
-      <td>Breathtaking</td>
-      <td>Lame</td>
-      <td>Answers</td>
-      <td>Arts</td>
-    </tr>
-  </tbody>
-</table>
+| In Dictionary (Positive) | In Dictionary (Negative) | Not in Dictionary (Positive) | Not in Dictionary (Negative) |
+|:------------------------:|:------------------------:|:----------------------------:|:----------------------------:|
+| Mesmerizing              | Boring                   | Touching                     | Harvard                      |
+| Captivating              | Offensive                | Transcends                   | Clichés                      |
+| Masterpiece              | Lifeless                 | Martha                       | Tuxedo                       |
+| Breathtaking             | Lame                     | Answers                      | Arts                         |
+
+The error distribution across the Naïve Bayes and Dictionary-based classifiers. There are 100 common errors.
+
+| Metric         | Naïve Bayes | Dictionary-based |
+|:--------------:|:-----------:|:----------------:|
+| Total Errors   | 234         | 358              |
+| Unique Errors  | 134         | 258              |
 
 
-
-
-
-The error distribution across the Naïve Bayes and Dictionary-based classifiers
-
-<table>
-  <thead>
-    <tr>
-      <th align="left">Metric</th>
-      <th align="center">Naïve Bayes</th>
-      <th align="center">Dictionary-based</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Total Errors</b></td>
-      <td align="center">234</td>
-      <td align="center">358</td>
-    </tr>
-    <tr>
-      <td><b>Unique Errors</b></td>
-      <td align="center">134</td>
-      <td align="center">258</td>
-    </tr>
-    <tr>
-      <td><b>Common Errors</b></td>
-      <td colspan="2" align="center">100</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Sources
 
