@@ -16,8 +16,8 @@ All code is written in Python 3 and is fully reproducible with the provided data
 
 ## Dataset
 
-- Rotton Tomatoes Movies Review
-- Nokia Phone Review
+- Rotten Tomatoes Movies Reviews
+- Nokia Phone Reviews
 
 ## Running the Project
 
@@ -99,6 +99,6 @@ The error distribution across the Naïve Bayes and Dictionary-based classifiers.
 
 ## Sources
 
-This project use te lexicons from:
+This project use the lexicons from:
 - Hu & Liu (2004) Opinion Lexicon  
 Provided in ```positive-words.txt``` and ```negative-words.txt```
