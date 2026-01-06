@@ -11,8 +11,8 @@ All code is written in Python 3 and is fully reproducible with the provided data
 ## Classifier
 
 - Naïve Bayes classifier
-- Dictionary-based classifier
-- Rule-Implemented Dictionary classifier (VADER)
+- Dictionary-based classifier (baseline)
+- Improved rule-based dictionary classifier (VADER-inspired)
 
 ## Dataset
 
@@ -70,7 +70,8 @@ Sentiment-Analysis/
 
 ## Results
 
-Top 5 positive and negative words selected by Naïve Bayes.
+### Top 5 positive and negative words selected by Naïve Bayes.
+
 |  #  | Positive  | Negative  |
 |:---:|:---------:|:---------:|
 |  1  | ½         | generic   |
@@ -79,7 +80,10 @@ Top 5 positive and negative words selected by Naïve Bayes.
 |  4  | inventive | mediocre  |
 |  5  | riveting  | routine   |
 
-Top sentiment words that are found and not found in the sentiment dictionary
+Due to the nature of the Naïve Bayes algorithm, it does not understand the context and semantic meaning of the text, so some tokens such as “½” and ï are detected as sentiment words.
+
+
+### Top sentiment words that are found and not found in the sentiment dictionary
 
 | In Dictionary (Positive) | In Dictionary (Negative) | Not in Dictionary (Positive) | Not in Dictionary (Negative) |
 |:------------------------:|:------------------------:|:----------------------------:|:----------------------------:|
@@ -88,14 +92,20 @@ Top sentiment words that are found and not found in the sentiment dictionary
 | Masterpiece              | Lifeless                 | Martha                       | Tuxedo                       |
 | Breathtaking             | Lame                     | Answers                      | Arts                         |
 
-The error distribution across the Naïve Bayes and Dictionary-based classifiers. There are 100 common errors.
+Some predictive words are missing from the sentiment lexicon. However, many of these words do not carry sentiment meaning, such as proper nouns or domain-specific terms.
 
-| Metric         | Naïve Bayes | Dictionary-based |
-|:--------------:|:-----------:|:----------------:|
-| Total Errors   | 234         | 358              |
-| Unique Errors  | 134         | 258              |
+### Comparison between Naïve Bayes, simple dictionary, and improved dictionary
 
+| Dataset | Classifier | Accuracy | Macro F1 |
+|:------:|:----------:|:--------:|:--------:|
+| Rotten Tomatoes | Naïve Bayes | 0.78 | 0.78 |
+| Rotten Tomatoes | Dictionary-based | 0.63 | 0.63 |
+| Rotten Tomatoes | Rule-based Dictionary | **0.66** | **0.67** |
+| Nokia Reviews | Naïve Bayes | 0.57 | 0.55 |
+| Nokia Reviews | Dictionary-based | 0.80 | 0.77 |
+| Nokia Reviews | Rule-based Dictionary | **0.82** | **0.81** |
 
+Naïve Bayes performs better on movie reviews but fails on phone reviews, as it is trained on the movie dataset. Dictionary-based approaches perform worse on movie reviews but generalise better to other domains, as seen in the Nokia product reviews.
 
 ## Sources
 
