@@ -80,24 +80,237 @@ Sentiment-Analysis/
 |  4  | inventive | mediocre  |
 |  5  | riveting  | routine   |
 
-Due to the nature of the Naïve Bayes algorithm, it does not understand the context and semantic meaning of the text, so some tokens such as “½” and ï are detected as sentiment words.
+Due to the nature of the Naïve Bayes algorithm, it does not understand the context and semantic meaning of the text, so some tokens such as “½s”, “sara”, and “51” are detected as sentiment words.
 
+Top 100 sentiment terms chosen by the Naïve Bayes classifier (click to expand)
+
+<details>
+  <summary><b>Positive words</b></summary>
+
+```text
+½
+ï
+engrossing
+inventive
+inviting
+refreshing
+realistic
+mesmerizing
+haunting
+gem
+refreshingly
+wonderfully
+chilling
+wonderful
+intense
+tender
+respect
+spare
+lively
+provides
+touching
+detailed
+vividly
+heartwarming
+wry
+jealously
+captivating
+aspects
+iranian
+captures
+assured
+transcends
+polished
+capture
+tour
+resonant
+powerful
+startling
+playful
+martha
+intimate
+½o
+smarter
+record
+gradually
+pleasing
+unexpected
+frailty
+depiction
+unflinching
+timely
+heartbreaking
+sides
+understands
+aware
+potent
+russian
+format
+absorbing
+unique
+masterful
+masterpiece
+joyous
+sadness
+hopeful
+elegant
+resist
+tasty
+½s
+answers
+subversive
+delightfully
+deft
+ingenious
+sobering
+integrity
+sly
+breathtaking
+uplifting
+deadpan
+speaks
+grown
+wrenching
+gut
+lovers
+buoyant
+distinctive
+lame
+evocative
+beauty
+portrait
+warm
+vivid
+portrayal
+intoxicating
+kissinger
+physical
+para
+straightforward
+```
+</details>
+
+<details>
+  <summary><b>Negative words</b></summary>
+
+```text
+generic
+unfunny
+waste
+mediocre
+routine
+badly
+poorly
+boring
+mindless
+stale
+dreary
+pointless
+disguise
+offensive
+tiresome
+annoying
+dull
+stupid
+unless
+cliche
+meandering
+apparently
+harvard
+mixed
+clichés
+bore
+inept
+banal
+weight
+product
+seagal
+lousy
+cliché
+numbers
+junk
+chan
+fatal
+shoot
+plodding
+stealing
+lifeless
+flat
+supposed
+ill
+bother
+preachy
+animal
+amateurish
+horrible
+retread
+kung
+trite
+wasted
+sadly
+unintentional
+incoherent
+crap
+leaden
+stunt
+tuxedo
+sara
+51
+hollow
+wannabe
+store
+serving
+lame
+disbelief
+obnoxious
+relentlessly
+pathetic
+generate
+pile
+crass
+stiff
+choppy
+uninspired
+numbingly
+ballistic
+conceived
+soggy
+unnecessary
+benign
+worse
+britney
+ship
+ingredients
+busy
+unintentionally
+overlong
+unfocused
+sink
+forced
+guess
+sour
+arts
+flash
+meant
+pow
+```
+</details>
 
 ### Top sentiment words that are found and not found in the sentiment dictionary
 
 | In Dictionary (Positive) | In Dictionary (Negative) | Not in Dictionary (Positive) | Not in Dictionary (Negative) |
-|:------------------------:|:------------------------:|:----------------------------:|:----------------------------:|
-| Mesmerizing              | Boring                   | Touching                     | Harvard                      |
-| Captivating              | Offensive                | Transcends                   | Clichés                      |
-| Masterpiece              | Lifeless                 | Martha                       | Tuxedo                       |
-| Breathtaking             | Lame                     | Answers                      | Arts                         |
+|:----:|:----:|:----:|:----:|
+| Mesmerizing | Boring | Touching | Harvard |
+| Captivating | Offensive | Transcends | Clichés |
+| Masterpiece | Lifeless | Martha | Tuxedo |
+| Breathtaking | Lame | Answers | Arts |
 
 Some predictive words are missing from the sentiment lexicon. However, many of these words do not carry sentiment meaning, such as proper nouns or domain-specific terms.
 
 ### Comparison between Naïve Bayes, simple dictionary, and improved dictionary
 
 | Dataset | Classifier | Accuracy | Macro F1 |
-|:------:|:----------:|:--------:|:--------:|
+|:----:|:----:|:----:|:----:|
 | Rotten Tomatoes | Naïve Bayes | 0.78 | 0.78 |
 | Rotten Tomatoes | Dictionary-based | 0.63 | 0.63 |
 | Rotten Tomatoes | Rule-based Dictionary | **0.66** | **0.67** |
