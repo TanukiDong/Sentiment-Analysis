@@ -92,7 +92,7 @@ Top 100 sentiment terms chosen by the Naïve Bayes classifier (click to expand)
 ï
 engrossing
 inventive
-inviting
+riveting
 refreshing
 realistic
 mesmerizing
@@ -104,6 +104,7 @@ chilling
 wonderful
 intense
 tender
+½n
 respect
 spare
 lively
@@ -175,7 +176,7 @@ gut
 lovers
 buoyant
 distinctive
-lame
+lane
 evocative
 beauty
 portrait
@@ -220,6 +221,7 @@ harvard
 mixed
 clichés
 bore
+pinocchio
 inept
 banal
 weight
@@ -276,7 +278,7 @@ ballistic
 conceived
 soggy
 unnecessary
-benign
+benigni
 worse
 britney
 ship
