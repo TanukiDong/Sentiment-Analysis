@@ -9,7 +9,39 @@ random.seed(80956)
 
 #------------- Function Definitions ---------------------
 
-def readFiles(sentimentDictionary,sentencesTrain,sentencesTest,sentencesNokia):
+def readFiles(
+        sentimentDictionary: dict[str, int],
+        sentencesTrain: dict[str, str],
+        sentencesTest: dict[str, str],
+        sentencesNokia: dict[str, str]
+        ) -> None:
+    """
+    Load sentiment lexicons and datasets, including Rotten Tomatoes movie reviews
+    and Nokia phone review datasets.
+
+    The Rotten Tomatoes dataset is randomly split into training (90%) and test (10%) sets. 
+    Nokia reviews are stored separately for cross-domain evaluation.
+
+    Parameters
+    ----------
+    sentimentDictionary : dict
+        Dictionary mapping words to sentiment values:
+        +1 for positive words and -1 for negative words.
+
+    sentencesTrain : dict
+        Dictionary mapping training sentences to sentiment labels
+
+    sentencesTest : dict
+        Dictionary mapping test sentences to sentiment labels
+
+    sentencesNokia : dict
+        Dictionary mapping Nokia review sentences to sentiment labels.
+
+    Returns
+    -------
+    None
+        Data is loaded into sentimentDictionary, sentencesTrain, sentencesTest, and sentencesNokia.
+    """
 
     #reading pre-labeled input and splitting into lines
     posSentences = open('data/rt-polarity.pos', 'r', encoding="ISO-8859-1")
@@ -63,10 +95,37 @@ def readFiles(sentimentDictionary,sentencesTrain,sentencesTest,sentencesNokia):
 #----------------------------End of data initialisation ----------------#
 
 # calculates p(W|Positive), p(W|Negative) and p(W) for all words in training data
-def trainBayes(sentencesTrain, pWordPos, pWordNeg, pWord):
-    posFeatures = [] # [] initialises a list [array]
-    negFeatures = [] 
-    freqPositive = {} # {} initialises a dictionary [hash function]
+def trainBayes(
+        sentencesTrain: dict[str, str],
+        pWordPos: dict[str, float],
+        pWordNeg: dict[str, float],
+        pWord: dict[str, float]
+        ) -> None:
+    """
+    Train a Naïve Bayes classifier using Rotten Tomatoes review training data.
+    It stores the conditional probabilities of words given sentiment classes
+    and the overall word probabilities in the provided dictionaries.
+
+    Parameters
+    ----------
+    sentencesTrain : dict
+        Dictionary mapping sentences to sentiment labels
+
+    pWordPos : dict
+        Dictionary to store probabilities of positive words P(word | positive).
+
+    pWordNeg : dict
+        Dictionary to store probabilities of negative words P(word | negative).
+ 
+    pWord : dict
+        Dictionary to store probabilities of words P(word).
+
+    Returns
+    -------
+    None
+        Probability dictionaries are saved in pWordPos, pWordNeg, and pWord.
+    """
+    freqPositive = {}
     freqNegative = {}
     dictionary = {}
     posWordsTot = 0
@@ -116,17 +175,45 @@ def trainBayes(sentencesTrain, pWordPos, pWordNeg, pWord):
 
 #---------------------------End Training ----------------------------------
 
-# implement naive bayes algorithm
-# INPUTS:
-#   sentencesTest is a dictonary with sentences associated with sentiment 
-#   dataName is a string (used only for printing output)
-#   pWordPos is dictionary storing p(word|positive) for each word
-#      i.e., pWordPos["apple"] will return a real value for p("apple"|positive)
-#   pWordNeg is dictionary storing p(word|negative) for each word
-#   pWord is dictionary storing p(word)
-#   pPos is a real number containing the fraction of positive reviews in the dataset
-def testBayes(sentencesTest, dataName, pWordPos, pWordNeg, pWord,pPos):
+# Implement Naïve Bayes Algorithm
+def testBayes(
+        sentencesTest: dict[str, str],
+        dataName: str,
+        pWordPos: dict[str, float],
+        pWordNeg: dict[str, float],
+        pWord: dict[str, float],
+        pPos: float
+        ) -> None:
+    """
+    Apply a Naïve Bayes classifier to a dataset (either training or testing) and evaluate performance.
+    Calculates the posterior probabilities of sentiment classes for each sentence based on word probabilities and class priors.
+    Performance metrics including accuracy, precision, recall, and F1 score are printed using the eval() function.
 
+    Parameters
+    ----------
+    sentencesTest : dict
+        Dictionary mapping test sentences to sentiment labels
+
+    dataName : str
+        Name of the dataset to use for display purposes.
+
+    pWordPos : dict
+        Dictionary of probability of word given it is positive P(word | positive).
+
+    pWordNeg : dict
+        Dictionary of probability of word given it is negative P(word | negative).
+
+    pWord : dict
+        Dictionary of probability of word P(word).
+
+    pPos : float
+        Fraction of positive reviews in the training dataset P(positive).
+
+    Returns
+    -------
+    None
+        Evaluation results are printed to stdout.
+    """
     print("Naive Bayes classification")
     pNeg=1-pPos
 
@@ -187,9 +274,6 @@ def testBayes(sentencesTest, dataName, pWordPos, pWordNeg, pWord,pPos):
                     with open('error/nb_fp.txt', 'a') as file:
                         print ("ERROR (pos classed as neg %0.2f):" %prob + sentence, file=file)
 
-# TODO for Step 2: Add some code here to calculate and print: (1) accuracy; (2) precision and recall for the positive class; 
-# (3) precision and recall for the negative class; (4) F1 score;
-
     eval(
             dataName,
             correct,
@@ -202,13 +286,38 @@ def testBayes(sentencesTest, dataName, pWordPos, pWordNeg, pWord,pPos):
             totalnegpred,
         )
 
-# This is a simple classifier that uses a sentiment dictionary to classify 
-# a sentence. For each word in the sentence, if the word is in the positive 
-# dictionary, it adds 1, if it is in the negative dictionary, it subtracts 1. 
-# If the final score is above a threshold, it classifies as "Positive", 
-# otherwise as "Negative"
-def testDictionary(sentencesTest, dataName, sentimentDictionary, threshold):
+# A simple classifier that uses a sentiment dictionary to classify a sentence.
+def testDictionary(
+        sentencesTest: dict[str, str],
+        dataName: str,
+        sentimentDictionary: dict[str, int],
+        threshold: float
+        ) -> None:
+    """
+    Classify sentences using a dictionary-based sentiment classifier.
 
+    Each sentence is scored by summing sentiment values of words found in the sentiment dictionary.
+    The sentence is classified as positive if the score exceeds a given threshold.
+
+    Parameters
+    ----------
+    sentencesTest : dict
+        Dictionary mapping test sentences to sentiment labels
+
+    dataName : str
+        Name of the dataset to use for display purposes.
+
+    sentimentDictionary : dict
+        Dictionary mapping words to sentiment values (+1 or -1).
+
+    threshold : float
+        Decision threshold for classification.
+
+    Returns
+    -------
+    None
+        Evaluation results are printed to stdout.
+    """
     print("Dictionary-based classification")
     total=0
     correct=0
@@ -246,9 +355,6 @@ def testDictionary(sentencesTest, dataName, sentimentDictionary, threshold):
                 correct+=0
                 totalpospred+=1
 
-# TODO for Step 5: Add some code here to calculate and print: (1) accuracy; (2) precision and recall for the positive class; 
-# (3) precision and recall for the negative class; (4) F1 score;
-
     eval(
             dataName,
             correct,
@@ -261,9 +367,39 @@ def testDictionary(sentencesTest, dataName, sentimentDictionary, threshold):
             totalnegpred,
         )
 
-
 # Print out n most useful predictors
-def mostUseful(pWordPos, pWordNeg, pWord, n):
+def mostUseful(
+        pWordPos: dict[str, float],
+        pWordNeg: dict[str, float],
+        pWord: dict[str, float],
+        n: int
+        ) -> tuple[list[str], list[str]]:
+    """
+    Identify the n most predictive words for sentiment classification.
+    Words are ranked by their probability of appearing in positive or negative sentiment sentences.
+
+    Parameters
+    ----------
+    pWordPos : dict
+        Dictionary to store probabilities of positive words P(word | positive).
+
+    pWordNeg : dict
+        Dictionary to store probabilities of negative words P(word | negative).
+ 
+    pWord : dict
+        Dictionary to store probabilities of words P(word).
+
+    n : int
+        Number of words to return.
+
+    Returns
+    -------
+    head : list
+        List of n words most predicted to occur in a negative sentiment sentence.
+
+    tail : list
+        List of n words most predicted to occur in a positive sentiment sentence.
+    """
     predictPower={}
     for word in pWord:
         if pWordNeg[word]<0.0000001:
@@ -287,16 +423,74 @@ def mostUseful(pWordPos, pWordNeg, pWord, n):
 
 
 # Count number of words in dictionary
-def countDictionaryWords(words, sentimentDictionary, Label=""):
+def countDictionaryWords(
+        words: list[str],
+        sentimentDictionary: dict[str, int],
+        label: str = ""
+        ) -> None:
+    """
+    Count how many words in a given list appear in the sentiment dictionary.
+    Use to check how many of the most useful words are present in the sentiment dictionary.
 
+    Parameters
+    ----------
+    words : list of str
+        List of words to be checked against the sentiment dictionary.
+
+    sentimentDictionary : dict
+        Dictionary mapping words to sentiment values (+1 or -1).
+
+    label : str, optional
+        Sentiment label used for display purposes.
+        Positive or Negative. Default is an empty string.
+
+    Returns
+    -------
+    None
+        Results are printed to stdout.
+    """
     matched_words = [w for w in words if w in sentimentDictionary]
-    print(f"{Label} words matched {len(matched_words)} out of {len(words)} words ({(len(matched_words)/len(words))*100:.0f}%)")
+    print(f"{label} words matched {len(matched_words)} out of {len(words)} words ({(len(matched_words)/len(words))*100:.0f}%)")
     print(matched_words)
 
 
 # Implement rules to dictionary classifier
-def testImprovedDict(sentencesTest, dataName, sentimentDictionary, threshold):
+def testImprovedDict(
+        sentencesTest: dict[str, str],
+        dataName: str,
+        sentimentDictionary: dict[str, int],
+        threshold: float
+        ) -> None:
+    """
+    Apply an improved rule-based sentiment classifier.
 
+    This classifier implements VADER-styled heuristic rules including:
+    - Punctuation
+    - Contrastive Conjunctions "but"
+    - Degree Modifiers
+    - Negations
+    - Exclamation
+    Details on these rules can be found in the calculate_valence() function in utils.py.
+
+    Parameters
+    ----------
+    sentencesTest : dict
+        Dictionary mapping test sentences to sentiment labels.
+
+    dataName : str
+        Name of the dataset to use for display purposes.
+
+    sentimentDictionary : dict
+        Dictionary mapping words to sentiment values (+1 or -1).
+
+    threshold : float
+        Decision threshold for classification.
+
+    Returns
+    -------
+    None
+        Evaluation results are printed to stdout.
+    """
     # Declare classifier
     print("\033[94mImproved Dictionary-based classification\033[0m")
 
@@ -374,44 +568,42 @@ def testImprovedDict(sentencesTest, dataName, sentimentDictionary, threshold):
         )
     
 #---------- Main Script --------------------------
+if __name__ == "__main__":
 
+    sentimentDictionary={}
+    sentencesTrain={}
+    sentencesTest={}
+    sentencesNokia={}
 
-sentimentDictionary={} # {} initialises a dictionary [hash function]
-sentencesTrain={}
-sentencesTest={}
-sentencesNokia={}
+    # Initialise datasets and dictionaries
+    readFiles(sentimentDictionary,sentencesTrain,sentencesTest,sentencesNokia)
 
-#initialise datasets and dictionaries
-readFiles(sentimentDictionary,sentencesTrain,sentencesTest,sentencesNokia)
+    pWordPos={} # p(W|Positive)
+    pWordNeg={} # p(W|Negative)
+    pWord={}    # p(W) 
 
-pWordPos={} # p(W|Positive)
-pWordNeg={} # p(W|Negative)
-pWord={}    # p(W) 
+    # Build Conditional probabilities using training data
+    trainBayes(sentencesTrain, pWordPos, pWordNeg, pWord)
 
-# build conditional probabilities using training data
-trainBayes(sentencesTrain, pWordPos, pWordNeg, pWord)
+    # Run Naïve Bayes classifier on datasets
+    testBayes(sentencesTrain,  "Films (Train Data, Naïve Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
+    testBayes(sentencesTest,  "Films  (Test Data, Naïve Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
+    testBayes(sentencesNokia, "Nokia   (All Data,  Naïve Bayes)\t", pWordPos, pWordNeg, pWord,0.7)
 
-# run naive bayes classifier on datasets
-testBayes(sentencesTrain,  "Films (Train Data, Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
-testBayes(sentencesTest,  "Films  (Test Data, Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.5)
-testBayes(sentencesNokia, "Nokia   (All Data,  Naive Bayes)\t", pWordPos, pWordNeg, pWord,0.7)
+    # Run sentiment dictionary based classifier on datasets
+    testDictionary(sentencesTrain,  "Films (Train Data, non Rule-Based)\t", sentimentDictionary, 1)
+    testDictionary(sentencesTest,  "Films  (Test Data, non Rule-Based)\t",  sentimentDictionary, 1)
+    testDictionary(sentencesNokia, "Nokia   (All Data, non Rule-Based)\t",  sentimentDictionary, 1)
 
+    # Run improved sentiment dictionary based classifier on datasets
+    testImprovedDict(sentencesTrain,  "Films (Train Data, Rule-Based)\t", sentimentDictionary, 1.0)
+    testImprovedDict(sentencesTest,  "Films  (Test Data, Rule-Based)\t",  sentimentDictionary, 1.0)
+    testImprovedDict(sentencesNokia, "Nokia   (All Data, Rule-Based)\t",  sentimentDictionary, 1.0)
 
+    # Print most useful words
+    neg_useful, pos_useful = mostUseful(pWordPos, pWordNeg, pWord, 100)
 
-# run sentiment dictionary based classifier on datasets
-testDictionary(sentencesTrain,  "Films (Train Data, non Rule-Based)\t", sentimentDictionary, 1)
-testDictionary(sentencesTest,  "Films  (Test Data, non Rule-Based)\t",  sentimentDictionary, 1)
-testDictionary(sentencesNokia, "Nokia   (All Data, non Rule-Based)\t",  sentimentDictionary, 1)
-
-# run improved sentiment dictionary based classifier on datasets
-testImprovedDict(sentencesTrain,  "Films (Train Data, Rule-Based)\t", sentimentDictionary, 1.0)
-testImprovedDict(sentencesTest,  "Films  (Test Data, Rule-Based)\t",  sentimentDictionary, 1.0)
-testImprovedDict(sentencesNokia, "Nokia   (All Data, Rule-Based)\t",  sentimentDictionary, 1.0)
-
-# print most useful words
-neg_useful, pos_useful = mostUseful(pWordPos, pWordNeg, pWord, 100)
-
-print()
-countDictionaryWords(neg_useful, sentimentDictionary, Label="Negative")
-print()
-countDictionaryWords(pos_useful, sentimentDictionary, Label="Positive")
+    print()
+    countDictionaryWords(neg_useful, sentimentDictionary, label="Negative")
+    print()
+    countDictionaryWords(pos_useful, sentimentDictionary, label="Positive")

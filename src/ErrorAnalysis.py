@@ -1,4 +1,21 @@
-def load_errors(path):
+def load_errors(
+        path: str
+        ) -> set[str]:
+    """
+    Reads an error file produced during classification e.g., false positives or false negatives
+    and extracts only the sentence text.
+    Duplicate sentences could be removed later by storing them in a set.
+
+    Parameters
+    ----------
+    path : str
+        Path to the error log file containing misclassified examples.
+
+    Returns
+    -------
+    set of str
+        A set of all unique sentences that were misclassified by the model.
+    """
     sentences = set()
     with open(path, "r") as file:
         for line in file:

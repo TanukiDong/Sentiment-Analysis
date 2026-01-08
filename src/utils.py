@@ -45,16 +45,54 @@ MODIFIER = {
 
 # Evaluate classifier
 def eval(
-        dataName,
-        correct,
-        total,
-        pos_actual,
-        neg_actual,
-        pos_correct,
-        pos_pred,
-        neg_correct,
-        neg_pred
+        dataName: str,
+        correct: int,
+        total: int,
+        pos_actual: int,
+        neg_actual: int,
+        pos_correct: int,
+        pos_pred: int,
+        neg_correct: int,
+        neg_pred: int
 ):
+    """
+    Calculate and print evaluation metrics for a sentiment classifier.
+    Metrics include accuracy, precision, recall, and F1 score for both positive and negative classes.
+
+    Parameters
+    ----------
+    dataName : str
+        Name of the dataset used for display purposes.
+
+    correct : int
+        Total number of correct predictions.
+
+    total : int
+        Total number of predictions.
+
+    pos_actual : int
+        Number of actual positive predictions.
+
+    neg_actual : int
+        Number of actual negative predictions.
+
+    pos_correct : int
+        Number of correctly predicted positive predictions.
+
+    pos_pred : int
+        Number of predictions predicted as positive.
+
+    neg_correct : int
+        Number of correctly predicted negative predictions.
+
+    neg_pred : int
+        Number of predictions predicted as negative.
+
+    Returns
+    -------
+    None
+        Metrics are printed to stdout.
+    """
 
     # 1 accuracy
     accuracy = correct / total
@@ -84,7 +122,42 @@ def eval(
         Macro F1 : {f1_macro:.3f}
 """)
 
-def calculate_valence(texts, sentimentDictionary):
+def calculate_valence(
+        texts: list[str],
+        sentimentDictionary: dict[str, int]
+        ) -> float:
+    """
+    Calculate the sentiment valence score for a list of words (sequence of tokens)
+    using the sentiment dictionary and applying VADER-styled heuristic rules.
+
+    The implemented rules include:
+    - Punctuation
+        Split the text into chunks based on terminal punctuation (.,;:) and calculate valence for each chunk separately.
+    - Contrastive Conjunctions "but"
+        If "but" is present, split the text into two chunks (before and after "but").
+        The chunk before "but" is given less weight,
+        The chunk after "but" is given more weight.
+    - Degree Modifiers
+        Intensifiers increase the sentiment value of the following words within a 5 word window.
+        Diminishers decrease the sentiment value of the following words within a 5 word window.
+    - Negations
+        Invert the sentiment value of the following words within a 5 word window.
+    - Exclamation
+        Increase the sentiment value of the word before "!".
+
+    Parameters
+    ----------
+    texts : list
+        List of words (tokens) in the sentence or chunk of text.
+
+    sentimentDictionary : dict
+        Dictionary mapping words to sentiment values (+1 or -1).
+
+    Returns
+    -------
+    float
+        The calculated sentiment valence score.
+    """
 
     # Initialize variables
     score = 0
@@ -184,7 +257,27 @@ def calculate_valence(texts, sentimentDictionary):
 
     return sum(valence)
 
-def predict_sentiment(score, threshold):
+def predict_sentiment(
+        score: float,
+        threshold: float
+        ) -> str:
+    """
+    Predict sentiment label based on a sentiment score and threshold.
+
+    Parameters
+    ----------
+    score : float
+        Sentiment valence score.
+
+    threshold : float
+        Decision threshold for classifying sentiment.
+
+    Returns
+    -------
+    str
+        Predicted sentiment label.
+        Positve or Negative.
+    """
     if score >= threshold:
         return "positive"
     else:
