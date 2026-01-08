@@ -1,0 +1,26 @@
+name: Run Sentiment Analysis scripts
+
+run-name: Run Sentiment.py and ErrorAnalysis.py
+
+on: [push]
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run Sentiment.py
+        run: |
+          python Sentiment.py
+
+      - name: Run ErrorAnalysis.py
+        run: |
+          python ErrorAnalysis.py
