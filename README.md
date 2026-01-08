@@ -1,3 +1,5 @@
+[![Run Sentiment Analysis scripts](https://github.com/TanukiDong/Sentiment-Analysis/actions/workflows/run-scripts.yaml/badge.svg)](https://github.com/TanukiDong/Sentiment-Analysis/actions/workflows/run-scripts.yaml)
+
 # Sentiment Analysis – COM6115 Text Processing
 
 A coursework project investigating Bayesian and rule-based sentiment classification
